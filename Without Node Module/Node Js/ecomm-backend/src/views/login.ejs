@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejs Profile App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script>
+        if(localStorage.getItem('ecomm-user') != null) {
+            window.location.href = '/'
+        }
+    </script>
+</head>
+
+<body>
+    <main class="container" id="main">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-5">
+                <div class="card my-4 shadow rounded-4">
+                    <div class="card-body">
+                        <form id="loginForm" action="/login" method="post">
+                            <div>
+                                <h3 class="text-center">Login</h3>
+                                        <% if(data.error != undefined) { %>
+                                            <div class="alert alert-danger" role="alert">
+                                                <%= data.error %>
+                                            </div>
+                                        <% } %>
+                                        <% 
+                                            if(data.message != undefined) {
+                                        %>
+                                            <script>
+                                                localStorage.setItem('ecomm-user','<%- data.authToken %>');
+                                                window.location.href = '/';
+                                            </script>
+                                            <div class="alert alert-success" role="alert">
+                                                <%= data.message %>
+                                            </div>
+                                        <% } %>
+                                        <hr />
+                                        <div class="my-3">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email" name="email" />
+                                        </div>
+                                        <div class="my-3">
+                                            <label for="password" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="password" name="password" />
+                                        </div>
+                                        <div class="mt-4 mb-2 d-flex justify-content-center">
+                                            <div class="w-25">
+                                                <button type="submit" class="btn btn-warning rounded-5 w-100">
+                                                    Login
+                                                </button>
+                                            </div>
+                                        </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

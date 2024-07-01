@@ -1,0 +1,59 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name: Kotlin"
+        android:textSize="18sp"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/textViewAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age: 30"
+        android:textSize="18sp"
+        android:layout_below="@id/textViewName"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile: 6514835164"
+        android:textSize="18sp"
+        android:layout_below="@id/textViewAge"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email: kotlin@example.com"
+        android:textSize="18sp"
+        android:layout_below="@id/textViewMobile"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address: Ahemedabad, India"
+        android:textSize="18sp"
+        android:layout_below="@id/textViewEmail"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewSkills"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skills: Android, Kotlin, Java"
+        android:textSize="18sp"
+        android:layout_below="@id/textViewAddress"
+        android:layout_marginTop="16dp"/>
+</RelativeLayout>

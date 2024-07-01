@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./index.css">
+    <title>Shipping Registration Form</title>
+</head>
+<body>
+
+    <!-- Container Details: length, service duration(days), service location, container class, owner logo, container number, Max Gross Weight, Tare Weight, Max Payload, Capacity, Manufactures Logo, container type, floor type, IOS type code -->
+    <!-- Shipment Owner Details: name, email, address, phone, business name, gst number -->
+    <!-- Client Details: name, email, address, phone, business name, gst number -->
+
+    <main class="bg">
+        <div class="container">
+            <div class="card w-100">
+                <div class="row">
+                    <div class="col-md-5 side-img">
+                        <!-- <img src="./imgs/side-img.jpg" alt="Shipment-Side-Image" class="rounded shipment-side-img" /> -->
+                    </div>
+                    <div class="col-md-7">
+                        <form class="shipment-form" action="">
+                            <h4 class="text-center">Shipment Container Registration</h2>
+                            <h6 class="section-title">Container Details:</h6>
+                            <hr />
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="cno">Container Id. Number</label>
+                                    <input type="text" class="mt-1 form-control focus-ring focus-ring-success border" name="cno" id="cno"/>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="ctype">Container Type</label>
+                                    <select class="form-select mt-1 form-control focus-ring focus-ring-success border" name="ctype" id="ctype">
+                                        <option selected>Select Container Type</option>
+                                        <option value="1">GENERAL PURPOSE CONTAINER</option>
+                                        <option value="2">HIGH CUBE GENERAL PURPOSE CONTAINER</option>
+                                        <option value="3">HIGH CUBE GENERAL PURPOSE CONTAINER</option>
+                                        <option value="4">HARDTOP CONTAINER</option>
+                                        <option value="5">HIGH CUBE HARDTOP CONTAINER</option>
+                                        <option value="6">ROOF AND DOOR OPENINGS OF HARDTOP CONTAINERS</option>
+                                        <option value="7">OPEN TOP CONTAINER</option>
+                                        <option value="8">HIGH CUBE OPEN TOP CONTAINER</option>
+                                        <option value="9">ROOF AND DOOR OPENINGS OF TOP CONTAINERS</option>
+                                        <option value="10">FLATRACK</option>
+                                        <option value="11">HIGH CUBE FLATRACK</option>
+                                        <option value="12">PLATFORM</option>
+                                        <option value="13">REFRIGERATED CONTAINER</option>
+                                        <option value="14">HIGH CUBE REFRIGERATED CONTAINER</option>
+                                        <option value="15">TANK CONTAINER</option>
+                                      </select>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="ctype">Container Floor Type</label>
+                                    <select class="form-select mt-1 form-control focus-ring focus-ring-success border" name="ctype" id="ctype">
+                                        <option selected>Select Container Type</option>
+                                        <option value="1">Wooden Floor</option>
+                                        <option value="1">Softwood Floor</option>
+                                        <option value="1">Steel Floor</option>
+                                      </select>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="ios-type-code">IOS Type Code</label>
+                                    <input type="text" class="mt-1 form-control focus-ring focus-ring-success border" name="ios-type-code" id="ios-type-code"/>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="csocity">Classification Socity</label>
+                                    <input type="text" class="mt-1 form-control focus-ring focus-ring-success border" name="csocity" id="csocity"/>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="clength">Container Length</label>
+                                    <input type="number" class="mt-1 form-control focus-ring focus-ring-success border" name="clength" id="clength"/>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="cheight">Container Height</label>
+                                    <input type="number" class="mt-1 form-control focus-ring focus-ring-success border" name="cheight" id="cheight"/>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="cwidth">Container Width</label>
+                                    <input type="number" class="mt-1 form-control focus-ring focus-ring-success border" name="cwidth" id="cwidth"/>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="capacity">Container Capacity</label>
+                                    <input type="number" class="mt-1 form-control focus-ring focus-ring-success border" name="capacity" id="capacity"/>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="maxgweight">Max Gross Weight</label>
+                                    <input type="number" class="mt-1 form-control focus-ring focus-ring-success border" name="maxgweight" id="maxgweight"/>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="tare-weight">Tare Weight</label>
+                                    <input type="number" class="mt-1 form-control focus-ring focus-ring-success border" name="tare-weight" id="tare-weight"/>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="max-payload">Max Payload</label>
+                                    <input type="number" class="mt-1 form-control focus-ring focus-ring-success border" name="max-payload" id="max-payload"/>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="max-payload">Max Payload</label>
+                                    <input type="number" class="mt-1 form-control focus-ring focus-ring-success border" name="max-payload" id="max-payload"/>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="manufacture-logo">Manufactures Logo</label>
+                                    <input type="file" class="mt-1 form-control focus-ring focus-ring-success border" name="manufacture-logo" id="manufacture-logo"/>
+                                </div>
+                            </div>
+                            <h6 class="section-title">Shipment Owner Details:</h6>
+                            <hr />
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control mt-1 form-control focus-ring focus-ring-success border" name="name" id="name"/>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="email">Email</label>
+                                    <input type="text" class="form-control mt-1 form-control focus-ring focus-ring-success border" name="email" id="email"/>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" class="form-control mt-1 form-control focus-ring focus-ring-success border" name="phone" id="phone"/>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="bname">Business Name</label>
+                                    <input type="text" class="form-control mt-1 form-control focus-ring focus-ring-success border" name="bname" id="bname"/>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="gst-number">GST Number</label>
+                                    <input type="text" class="form-control mt-1 form-control focus-ring focus-ring-success border" name="gst-number" id="gst-number"/>
+                                </div>
+                            </div>
+                            <h6 class="section-title">Client Details:</h6>
+                            <hr />
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control mt-1 form-control focus-ring focus-ring-success border" name="name" id="name"/>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="email">Email</label>
+                                    <input type="text" class="form-control mt-1 form-control focus-ring focus-ring-success border" name="email" id="email"/>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" class="form-control mt-1 form-control focus-ring focus-ring-success border" name="phone" id="phone"/>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="bname">Business Name</label>
+                                    <input type="text" class="form-control mt-1 form-control focus-ring focus-ring-success border" name="bname" id="bname"/>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="gst-number">GST Number</label>
+                                    <input type="text" class="form-control mt-1 form-control focus-ring focus-ring-success border" name="gst-number" id="gst-number"/>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<form [formGroup]="regForm" (ngSubmit)="onSubmitForm()">
+  <h1>User Registration</h1>
+  <mat-grid-list cols="6" rowHeight="90px" style="width: 600px">
+    <mat-grid-tile colspan="3">
+      <mat-form-field class="w-100 me-1" appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input
+          matInput
+          type="text"
+          minlength="3"
+          name="fname"
+          formControlName="fname"
+          [errorStateMatcher]="matcher"
+          placeholder="Ex. Jon"
+          required
+        />
+        @if (control['fname'].hasError('fname') && !control['fname'].hasError("required")) {
+          <mat-error>Please enter a valid first name</mat-error>
+        }
+        @if (control['fname'].hasError('required')) {
+          <mat-error>First Name is <strong>required</strong></mat-error>
+        }
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="3">
+      <mat-form-field class="w-100 me-1" appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input
+          matInput
+          type="text"
+          name="lname"
+          formControlName="lname"
+          [errorStateMatcher]="matcher"
+          placeholder="Ex. Deo"
+          required
+        />
+        @if (control['lname'].hasError('lname') && !control['lname'].hasError('required')) {
+        <mat-error>Please enter a valid Last name</mat-error>
+        } @if (control['lname'].hasError('required')) {
+        <mat-error>Last Name is <strong>required</strong></mat-error>
+        }
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="6">
+      <mat-form-field class="w-100 me-1" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          type="email"
+          name="email"
+          formControlName="email"
+          [errorStateMatcher]="matcher"
+          placeholder="Ex. jondeo@example.com"
+          required
+        />
+        @if (control['email'].hasError('email') && !control['email'].hasError('required')) {
+          <mat-error>Please enter a valid email address</mat-error>
+        } @if (control['email'].hasError('required')) {
+          <mat-error>Email is <strong>required</strong></mat-error>
+        }
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="3">
+      <mat-form-field class="w-100 me-1" appearance="outline">
+        <mat-label>Mobile No.</mat-label>
+        <input
+          matInput
+          type="number"
+          name="phone"
+          formControlName="phone"
+          placeholder="Ex. 9999999999"
+          required
+        />
+        @if (control['phone'].hasError('phone') && !control['phone'].hasError('required')) {
+          <mat-error>Please enter a valid Phone No</mat-error>
+        } @if (control['phone'].hasError('required')) {
+          <mat-error>Phone No is <strong>required</strong></mat-error>
+        }
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="3">
+      <mat-form-field class="w-100 me-1" appearance="outline">
+        <mat-label>Date of Birth</mat-label>
+        <input
+          matInput
+          name="dob"
+          formControlName="dob"
+          [matDatepicker]="picker"
+          [errorStateMatcher]="matcher"
+          required
+        >
+        <!-- <mat-hint>DD/MM/YYYY</mat-hint> -->
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        @if (control['dob'].errors && !control['dob'].hasError('required')) {
+          <!-- <mat-error>Please enter a valid Date of Birth</mat-error> -->
+          
+        } @if (control['dob'].hasError('required')) {
+          <mat-error>Date of Birth is <strong>required</strong></mat-error>
+        }
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="3">
+      <mat-form-field class="w-100 me-1" appearance="outline">
+        <mat-label>Gender</mat-label>
+        <mat-select
+          name="gender"
+          formControlName="gender"
+          [errorStateMatcher]="matcher"
+          placeholder="Select Gender"
+          required
+        >
+          <mat-option value="male">Male</mat-option>
+          <mat-option value="female">Female</mat-option>
+          <mat-option value="other">Other</mat-option>
+        </mat-select>
+        @if (control['gender'].hasError('gender') && !control['gender'].hasError('required')) {
+          <mat-error>Please enter a valid Gender</mat-error>
+        }
+        @if (control['gender'].hasError('required')) {
+          <mat-error>Gender is <strong>required</strong></mat-error>
+        }
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="3">
+      <mat-form-field class="w-100 me-1" appearance="outline">
+        <mat-label>PIN code</mat-label>
+        <input
+          matInput
+          type="number"
+          minlength="6"
+          maxlength="6"
+          name="pincode"
+          formControlName="pincode"
+          [errorStateMatcher]="matcher"
+          (keyup)="onPincodeChange($event)"
+          placeholder="Ex. 364001"
+          required
+        />
+        @if (control['pincode'].hasError('pincode') || control['pincode'].hasError('incorrect') && !control['pincode'].hasError('required')) {
+          <mat-error>Please enter a valid Pincode</mat-error>
+        }
+        @if (control['pincode'].hasError('required')) {
+          <mat-error>Pincode is <strong>required</strong></mat-error>
+        }
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2">
+      <mat-form-field class="w-100 me-1" appearance="outline">
+        <mat-label>Country</mat-label>
+        <input
+          matInput
+          name="country"
+          formControlName="country"
+          [errorStateMatcher]="matcher"
+          placeholder="Ex. India"
+          required
+        />
+        @if (control['country'].hasError('country') && !control['country'].hasError('required')) {
+          <mat-error>Please enter a valid Country</mat-error>
+        }
+        @if (control['country'].hasError('required')) {
+          <mat-error>Country is <strong>required</strong></mat-error>
+        }
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2">
+      <mat-form-field class="w-100 me-1" appearance="outline">
+        <mat-label>State</mat-label>
+        <input
+          matInput
+          name="state"
+          formControlName="state"
+          [errorStateMatcher]="matcher"
+          placeholder="Ex. Gujarat"
+          required
+        />
+        @if (control['state'].hasError('state') && !control['state'].hasError('required')) {
+          <mat-error>Please enter a valid State</mat-error>
+        }
+        @if (control['state'].hasError('required')) {
+          <mat-error>State is <strong>required</strong></mat-error>
+        }
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2">
+      <mat-form-field class="w-100 me-1" appearance="outline">
+        <mat-label>District</mat-label>
+        <input
+          matInput
+          name="district"
+          formControlName="district"
+          [errorStateMatcher]="matcher"
+          placeholder="Ex. Bhavnagar"
+          required
+        />
+        @if (control['district'].hasError('district') && !control['district'].hasError('required')) {
+          <mat-error>Please enter a valid District</mat-error>
+        }
+        @if (control['district'].hasError('required')) {
+          <mat-error>District is <strong>required</strong></mat-error>
+        }
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="6" rowspan="1.5">
+      <mat-form-field class="w-100 me-1" appearance="outline">
+        <mat-label>Address</mat-label>
+        <textarea
+          matInput
+          rows="4"
+          name="address"
+          formControlName="address"
+          [errorStateMatcher]="matcher"
+          required
+        >
+        </textarea>
+        @if (control['address'].hasError('address') && !control['address'].hasError('required')) {
+          <mat-error>Please enter a valid Address</mat-error>
+        }
+        @if (control['address'].hasError('required')) {
+          <mat-error>Address is <strong>required</strong></mat-error>
+        }
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <button mat-raised-button color="primary" [disabled]="!regForm.valid">Register Now</button>
+  <br><br>
+  {{getString(regForm.value)}}
+</form>
+
+<!-- fname, lname
+email, password
+phone, dob
+gender, pincode
+country, state, district
+address, -->

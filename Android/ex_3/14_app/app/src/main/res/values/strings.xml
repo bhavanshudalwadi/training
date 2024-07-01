@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">fourteen_app</string>
+    <string name="enter_radius">enter Radius</string>
+    <string name="enter_length">enter length</string>
+    <string name="enter_breath">enter breath</string>
+    <string name="area">area</string>
+
+    <string-array name="Shape">
+        <item>Circle</item>
+        <item>Square</item>
+    </string-array>
+</resources>

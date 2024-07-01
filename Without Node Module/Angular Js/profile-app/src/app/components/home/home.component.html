@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="card mt-3 shadow bg-body-tertiary border-0 rounded-5">
+      <div class="card-body">
+        <h1 class="fs-2">{{profileInfo.fname}} {{profileInfo.lname}}</h1>
+        <h2 class="fs-5 m-0">Basic Information</h2>
+        <hr class="mt-0" />
+        <table class="basic-information table table-borderless">
+          <tbody>
+            @if(profileInfo.gender != null) {
+              <tr>
+                <th scope="row">Gender:</th>
+                <td>{{profileInfo.gender}}</td>
+              </tr>
+            }
+            @if(profileInfo.dob != null) {
+              <tr>
+                <th scope="row">Date of Birth:</th>
+                <td>{{profileInfo.dob}}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+        <h2 class="fs-5 m-0">Contact Information</h2>
+        <hr class="mt-0" />
+        <table class="contact-information table table-borderless">
+          <tbody>
+            @if(profileInfo.phone != null) {
+              <tr>
+                <th scope="row">Phone:</th>
+                <td>+91 {{profileInfo.phone}}</td>
+              </tr>
+            }
+            @if(profileInfo.email != null) {
+              <tr>
+                <th scope="row">Email:</th>
+                <td>{{profileInfo.email}}</td>
+              </tr>
+            }
+            @if(profileInfo.address != null || profileInfo.country != null || profileInfo.state != null || profileInfo.district != null) {
+              <tr>
+                <th scope="row">Address:</th>
+                <td>{{profileInfo.address}} {{profileInfo.district != null ? ','+profileInfo.district : ''}} {{profileInfo.state != null ? ','+profileInfo.state : ''}} {{profileInfo.country != null ? ','+profileInfo.country : ''}} {{profileInfo.pincode != null ? '-'+profileInfo.pincode : ''}}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3"></div>
+</div>

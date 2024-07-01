@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal">
+
+    <!-- View with a red background -->
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#FF0000" />
+
+    <!-- View with a green background -->
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#00FF00"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- View with a blue background -->
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#0000FF" />
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<div class='row'>
+    <div class="col-md-2"></div>
+    @if (orders && orders.length === 0) {
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h4>Your have no orders :)</h4>
+                </div>
+            </div>
+        </div>
+    }@else {
+        <div class="col-md-8">
+            @for (order of orders; track $index) {
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5>Date: {{changeDateFormate(order.date)}}</h5>
+                            <h5>Order Status: <span class="badge text-bg-primary">{{order.status}}</span></h5>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                @for (c of order.products; track $index) {
+                                    <div class="card d-flex flex-row mt-3">
+                                        <img [src]="environment.imageURL+'/'+c.product.image" class="card-img-left" style="width: 100px" alt="product-image" />
+                                        <div class="card-body">
+                                            <h5 class="card-title product-name">{{c.product.name}}</h5>
+                                            <div class="d-flex justify-content-between">
+                                                <h4>₹ {{c.product.price}}</h4>
+                                                <h5>Qty: {{c.quantity}}</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                            <div class="col-md-4">
+                                <h6>Delivery Address: </h6>
+                                <p>{{order.address}}</p>
+                                <h6>Payment Mode: </h6>
+                                <p><span class="badge text-bg-primary">{{order.payment.mode}}</span></p>
+                                <h6>Payment Details: </h6>
+                                <p>{{order.payment.details}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }  
+            </div>
+    }
+    <div class="col-md-2"></div>
+</div>

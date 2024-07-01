@@ -1,0 +1,254 @@
+# Common .gitignore
+/$RECYCLE.BIN
+/System Volume Information
+**/$RECYCLE.BIN
+**/System Volume Information
+**/*.zip
+**/.git
+
+# Angular .gitignore
+**/*.iml
+**/.gradle
+**/local.properties
+# JetBrains, aka PHPStorm, IntelliJ IDEA
+**/.idea/caches
+**/.idea/libraries
+**/.idea/modules.xml
+**/.idea/workspace.xml
+**/.idea/navEditor.xml
+**/.idea/assetWizardSettings.xml
+**/build
+**/captures
+**/.externalNativeBuild
+**/.cxx
+**/local.properties
+
+# Angular .gitignore
+**/dist
+**/tmp
+**/out-tsc
+**/bazel-out
+
+# Node
+**/node_modules
+**/npm-debug.log
+**/yarn-error.log
+
+# IDEs and editors
+# JetBrains, aka PHPStorm, IntelliJ IDEA
+**/.idea/
+**/.project
+**/.classpath
+**/.c9/
+**/*.launch
+**/.settings/
+
+# Visual Studio Code
+**/.vscode/*
+**/!.vscode/settings.json
+**/!.vscode/tasks.json
+**/!.vscode/launch.json
+**/!.vscode/extensions.json
+**/.history/*
+
+# Miscellaneous
+**/.angular/cache
+**/.sass-cache/
+**/connect.lock
+**/coverage
+**/libpeerconnection.log
+**/testem.log
+**/typings
+
+# System files
+**/.DS_Store
+**/Thumbs.db
+
+# Flutter .gitignore
+# Miscellaneous
+**/*.class
+**/*.log
+**/*.pyc
+**/*.swp
+**/.atom/
+**/.buildlog/
+**/.history
+**/.svn/
+**/migrate_working_dir/
+
+# IntelliJ related
+**/*.ipr
+**/*.iws
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.pub-cache/
+**/.pub/
+
+# Symbolication related
+**/app.*.symbols
+
+# Obfuscation related
+**/app.*.map.json
+
+# Android Studio will place build artifacts here
+**/android/app/debug
+**/android/app/profile
+**/android/app/release
+
+# CakePHP .gitignore
+# CakePHP specific files #
+##########################
+**/config/app_local.php
+**/config/.env
+**/logs/*
+**/tmp/*
+**/vendor/*
+
+# OS generated files #
+######################
+**/._*
+**/.Spotlight-V100
+**/.Trashes
+# Icon must end with two \r
+**/Icon
+
+**/ehthumbs.db
+**/.directory
+
+# Tool specific files #
+#######################
+# PHPUnit
+**/.phpunit.result.cache
+**/tests.sqlite
+# vim
+**/*~
+**/*.swo
+# sublime text & textmate
+**/*.sublime-*
+**/*.stTheme.cache
+**/*.tmlanguage.cache
+**/*.tmPreferences.cache
+# NetBeans
+**/nbproject/*
+# nova
+**/.nova
+# yarn
+**/yarn-debug.log
+
+# Laravel .gitignore
+**/.phpunit.cache
+**/public/build
+**/public/hot
+**/public/storage
+**/storage/*.key
+**/Homestead.json
+**/Homestead.yaml
+**/auth.json
+**/.fleet
+
+# React Js .gitignore
+# Logs
+**/*.log
+**/pnpm-debug.log*
+**/lerna-debug.log*
+
+**/dist-ssr
+**/*.local
+
+# Editor directories and files
+**/*.suo
+**/*.ntvs*
+**/*.njsproj
+**/*.sln
+**/*.sw?
+
+# React Native .gitignore
+# Xcode
+**/*.pbxuser
+**/!default.pbxuser
+**/*.mode1v3
+**/!default.mode1v3
+**/*.mode2v3
+**/!default.mode2v3
+**/*.perspectivev3
+**/!default.perspectivev3
+**/xcuserdata
+**/*.xccheckout
+**/*.moved-aside
+**/DerivedData
+**/*.hmap
+**/*.ipa
+**/*.xcuserstate
+**/.xcode.env.local
+
+# Android/IntelliJ
+**/*.hprof
+**/*.keystore
+**/!debug.keystore
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
+
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots
+**/fastlane/test_output
+
+# Bundle artifact
+**/*.jsbundle
+
+# Ruby / CocoaPods
+**/Pods/
+
+# Temporary files created by Metro to check the health of the file watcher
+**/.metro-health-check*
+
+# testing
+**/coverage
+
+# Yarn
+**/.yarn/*
+**/!.yarn/patches
+**/!.yarn/plugins
+**/!.yarn/releases
+**/!.yarn/sdks
+**/!.yarn/versions
+
+**/React Native/*/android/
+
+# Spring Boot (STS) .gitignore
+**/HELP.md
+**/target/
+**/!.mvn/wrapper/maven-wrapper.jar
+**/!**/src/main/**/target/
+**/!**/src/test/**/target/
+
+### STS ###
+**/.apt_generated
+**/.classpath
+**/.factorypath
+**/.springBeans
+**/.sts4-cache
+
+### NetBeans ###
+**/nbbuild/
+**/nbdist/
+**/.nb-gradle/
+**/!**/src/main/**/build/
+**/!**/src/test/**/build/
+
+**/%ProgramData%

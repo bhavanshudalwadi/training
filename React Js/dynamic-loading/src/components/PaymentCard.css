@@ -1,0 +1,28 @@
+.payment-card {
+    background-color: #eee;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+.payment-card h2 {
+    font-size: 23px;
+}
+
+.payment-card h3 {
+    font-size: 20px;
+}
+
+.transaction-card {
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.transaction-card h4 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.transaction-card p {
+    font-size: 17px;
+    margin: 0;
+}

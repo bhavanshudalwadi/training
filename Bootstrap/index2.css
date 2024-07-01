@@ -1,0 +1,45 @@
+.bg {
+    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,96,1) 49%, rgba(0,212,255,1) 100%); */
+    /* background: #FBFDFF; */
+    background: url('./imgs/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card {
+    background-color: rgba(250, 252, 255, 0.1);
+    border: none;
+    color: white;
+    backdrop-filter: blur(20px);
+}
+
+.container {
+    padding: 5% 0;
+}
+
+.side-img {
+    background: url('./imgs/side-img.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.shipment-side-img {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.shipment-form {
+    padding: 5%;
+}
+
+label {
+    margin-top: 10px;
+}
+
+h6.section-title {
+    margin-top: 30px;
+}

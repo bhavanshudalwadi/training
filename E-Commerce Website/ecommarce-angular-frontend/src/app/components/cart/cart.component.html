@@ -1,0 +1,58 @@
+<div class='row'>
+    @if(cartItems && cartItems.length === 0) {
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body text-center">
+              <h4>Your Cart is Empty ...</h4>
+            </div>
+          </div>
+        </div>
+    }@else {
+        <div class="col-md-12 p-0">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="d-flex justify-content-between">
+                <h5>Basket: ({{totalItems}})</h5>
+                <h5>Total Amount: ₹ {{totalAmount}}</h5>
+              </div>
+              @for (item of cartItems; track $index) {
+                <div class="card d-flex flex-row mt-3">
+                  <img [src]="item.product.image" class="card-img-left" style="width: 150px" alt="product-image" routerLink="/product-details/{{item.product._id}}" />
+                  <div class="card-body">
+                    <a routerLink="/product-details/{{item.product._id}}" style="color: #000; text-decoration: none;">
+                      <h5 class="card-titl product-name">{{item.product.name}}</h5>
+                      <h4>₹ {{item.product.price}}</h4>
+                    </a>
+                    <div class='d-flex justify-content-end'>
+                      <button class="btn btn-primary" (click)="handleQtyUpdate(item.product._id, item.quantity - 1)">
+                        <i class="bi bi-dash-lg"></i>
+                      </button>
+                      <span class="card py-1 px-3 fs-5 mx-2">{{item.quantity}}</span>
+                      <button class="btn btn-primary" (click)="handleQtyUpdate(item.product._id, item.quantity + 1)">
+                        <i class="bi bi-plus-lg"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              }
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+              <h5 class="mt-5">Payment and Shiping Details</h5>
+              <div class="mb-3">
+                <label htmlFor="address" class="form-label">Address</label>
+                <textarea class="form-control" id="address" name="address" rows="3" [(ngModel)]="address"></textarea>
+              </div> 
+              <div class="mb-3">
+                <label htmlFor="address" class="form-label">Payment Mode</label>
+                <select class="form-select" aria-label="Default select example" name="payment_mode" [(ngModel)]="payment_mode">
+                  <option value="" selected>Select payment mode</option>
+                  <option value="COD">Cash On Delevery</option>
+                </select>
+              </div>
+              <button class="btn btn-primary w-100" (click)="handlePlaceOrder()">Place Order</button>
+            </div>
+          </div>
+        </div>
+    }
+</div>

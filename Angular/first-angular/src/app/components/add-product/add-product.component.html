@@ -1,0 +1,45 @@
+<div class="row d-flex justify-content-center mt-4">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <form class="text-center" (ngSubmit)="addProduct()">
+            <mat-form-field class="w-100" appearance="outline" color="primary">
+                <mat-label>title</mat-label>
+                <input matInput name="title" [(ngModel)]="product.title" placeholder="Enter title" />
+            </mat-form-field>
+            <mat-form-field class="w-100" appearance="outline" color="primary">
+                <mat-label>description</mat-label>
+                <input matInput name="description"  [(ngModel)]="product.description" placeholder="Enter description" />
+            </mat-form-field>
+            <mat-form-field class="w-100" appearance="outline" color="primary">
+                <mat-label>price</mat-label>
+                <input matInput type="number" name="price"  [(ngModel)]="product.price" placeholder="Enter price" />
+            </mat-form-field>
+            <mat-form-field class="w-100" appearance="outline" color="primary">
+                <mat-label>discountPercentage</mat-label>
+                <input matInput type="number" name="discountPercentage" [(ngModel)]="product.discountPercentage" placeholder="Enter discountPercentage" />
+            </mat-form-field>
+            <mat-form-field class="w-100" appearance="outline" color="primary">
+                <mat-label>rating</mat-label>
+                <input matInput type="number" name="rating" [(ngModel)]="product.rating" placeholder="Enter rating" />
+            </mat-form-field>
+            <mat-form-field class="w-100" appearance="outline" color="primary">
+                <mat-label>stock</mat-label>
+                <input matInput type="number" name="stock" [(ngModel)]="product.stock" placeholder="Enter stock" />
+            </mat-form-field>
+            <mat-form-field class="w-100" appearance="outline" color="primary">
+                <mat-label>brand</mat-label>
+                <input matInput name="brand" [(ngModel)]="product.brand" placeholder="Enter brand" />
+            </mat-form-field>
+            <mat-form-field class="w-100" appearance="outline" color="primary">
+                <mat-label>category</mat-label>
+                <input matInput name="category" [(ngModel)]="product.category" placeholder="Enter category" />
+            </mat-form-field>
+            <mat-form-field class="w-100" appearance="outline" color="primary">
+                <mat-label>thumbnail</mat-label>
+                <input matInput name="thumbnail" [(ngModel)]="product.thumbnail" placeholder="Enter thumbnail URL" />
+            </mat-form-field>
+            <button mat-raised-button color="primary">Add Product</button>
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+</div>

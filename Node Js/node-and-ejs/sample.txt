@@ -1,0 +1,2 @@
+npx express-generator --view=ejs myapp
+$env:DEBUG='node-and-ejs:*'; npm start --watch

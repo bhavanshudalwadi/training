@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="card mt-3 shadow bg-body-tertiary border-0 rounded-5">
+            <div class="card-body text-center">
+                <h1>Login</h1>
+                <mat-form-field class="w-100 me-1" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input
+                      matInput
+                      type="email"
+                      name="email"
+                      [(ngModel)]="loginDetails.email"
+                      required
+                    />
+                </mat-form-field>
+                <mat-form-field class="w-100 me-1" appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input
+                      matInput
+                      type="password"
+                      name="password"
+                      [(ngModel)]="loginDetails.password"
+                      required
+                    />
+                </mat-form-field>
+                <button mat-flat-button class="rounded-5 w-25" color="primary" (click)="handleLogin()">LOGIN</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>

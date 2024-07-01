@@ -1,0 +1,15 @@
+<mat-card class="shadow mb-4">
+    <img mat-card-image class="!h-20" [src]="product.thumbnail">
+    <div class="p-4">
+        <h1>{{product.title}}</h1>
+        <h2>{{product.brand}}</h2>
+        <div class="d-flex gap-2">
+            <span>Rs. {{product.price}}</span>
+            <span>Rs. <s>{{(product.price + ((product.discountPercentage * product.price)/100)).toFixed(2)}}</s></span>
+            <span>{{product.discountPercentage}}% Off</span>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+            <button mat-raised-button color="primary" (click)="view()">View</button>
+        </div>
+    </div>
+</mat-card>

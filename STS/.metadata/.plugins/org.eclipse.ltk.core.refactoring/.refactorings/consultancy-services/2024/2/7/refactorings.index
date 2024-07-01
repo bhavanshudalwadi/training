@@ -1,0 +1,13 @@
+1707744863689	Delete elements
+1707746287436	Encapsulate field 'consultant_Id'
+1707746291974	Encapsulate field 'student_Id'
+1707804852571	Delete element
+1707806980964	Delete elements
+1707806989726	Rename resource 'custom-login.jsp'
+1707811476420	Rename package 'com.consultancy.services.security.config'
+1707817525277	Delete element
+1707821821429	Rename type 'ConsultantService'
+1707833604671	Delete element
+1707886250394	Move file
+1707891932622	Encapsulate field 'consultantId'
+1707891939448	Encapsulate field 'studentId'

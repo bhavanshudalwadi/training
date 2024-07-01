@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 2 elements to &apos;WEB-INF&apos;&#x0D;&#x0A;- Original project: &apos;food-order&apos;&#x0D;&#x0A;- Destination element: &apos;WEB-INF&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     lib&#x0D;&#x0A;     jsp&#x0D;&#x0A;- Update references to refactored element" description="Move folders" element1="src/main/webapp/lib" element2="src/main/webapp/jsp" files="0" flags="589830" folders="2" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1708061913818" target="src/main/webapp/WEB-INF" units="0" version="1.0"/>
+</session>

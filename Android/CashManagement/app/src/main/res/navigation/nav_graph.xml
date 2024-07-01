@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/categoriesFragment">
+
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.example.cashmanagement.fragments.CategoriesFragment"
+        android:label="CategoriesFragment" >
+        <action
+            android:id="@+id/action_categoriesFragment_to_editCategoryFragment"
+            app:destination="@id/editCategoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editCategoryFragment"
+        android:name="com.example.cashmanagement.fragments.EditCategoryFragment"
+        android:label="EditCategoryFragment" >
+        <action
+            android:id="@+id/action_editCategoryFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+
+        <argument
+            android:name="category"
+            app:argType="com.example.cashmanagement.models.CategoryModel"
+            app:nullable="true" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/budgetsFragment"
+        android:name="com.example.cashmanagement.fragments.BudgetsFragment"
+        android:label="BudgetsFragment" >
+        <action
+            android:id="@+id/action_budgetsFragment_to_editBudgetFragment"
+            app:destination="@id/editBudgetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transectionsFragment"
+        android:name="com.example.cashmanagement.fragments.TransectionsFragment"
+        android:label="TransectionsFragment" >
+        <action
+            android:id="@+id/action_transectionsFragment_to_editTransectionFragment"
+            app:destination="@id/editTransectionFragment" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/editBudgetFragment"
+        android:name="com.example.cashmanagement.fragments.EditBudgetFragment"
+        android:label="EditBudgetFragment" >
+        <action
+            android:id="@+id/action_editBudgetFragment_to_budgetsFragment"
+            app:destination="@id/budgetsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editTransectionFragment"
+        android:name="com.example.cashmanagement.fragments.EditTransectionFragment"
+        android:label="EditTransectionFragment" >
+        <action
+            android:id="@+id/action_editTransectionFragment_to_transectionsFragment"
+            app:destination="@id/transectionsFragment" />
+    </fragment>
+</navigation>

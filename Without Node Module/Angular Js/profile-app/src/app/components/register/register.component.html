@@ -1,0 +1,169 @@
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="card mt-3 shadow bg-body-tertiary border-0 rounded-5">
+            <div class="card-body text-center">
+                <h1>Register</h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <mat-form-field class="w-100 me-1" appearance="outline">
+                            <mat-label>First Name</mat-label>
+                            <input
+                                matInput
+                                type="text"
+                                name="fname"
+                                minlength="3"
+                                [(ngModel)]="regInfo.fname"
+                                required
+                            />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field class="w-100 me-1" appearance="outline">
+                            <mat-label>Last Name</mat-label>
+                            <input
+                                matInput
+                                type="text"
+                                name="lname"
+                                minlength="3"
+                                [(ngModel)]="regInfo.lname"
+                                required
+                            />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-12">
+                        <mat-form-field class="w-100 me-1" appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input
+                                matInput
+                                type="email"
+                                name="email"
+                                [(ngModel)]="regInfo.email"
+                                required
+                            />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-12">
+                        <mat-form-field class="w-100 me-1" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input
+                                matInput
+                                type="password"
+                                name="password"
+                                [(ngModel)]="regInfo.password"
+                                required
+                            />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field class="w-100 me-1" appearance="outline">
+                            <mat-label>Mobile No</mat-label>
+                            <input
+                                matInput
+                                type="number"
+                                minlength="10"
+                                [(ngModel)]="regInfo.phone"
+                                name="phone"
+                                required
+                            />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field class="w-100 me-1" appearance="outline">
+                            <mat-label>Date of Birth</mat-label>
+                            <input
+                                matInput
+                                name="dob"
+                                [matDatepicker]="picker"
+                                [(ngModel)]="regInfo.dob"
+                                required
+                            >
+                            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field class="w-100 me-1" appearance="outline">
+                            <mat-label>Gender</mat-label>
+                            <mat-select
+                                name="gender"
+                                placeholder="Select Gender"
+                                [(ngModel)]="regInfo.gender"
+                                required
+                            >
+                            <mat-option value="male">Male</mat-option>
+                            <mat-option value="female">Female</mat-option>
+                            <mat-option value="other">Other</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field class="w-100 me-1" appearance="outline">
+                            <mat-label>PIN code</mat-label>
+                            <input
+                                matInput
+                                type="number"
+                                minlength="6"
+                                name="pincode"
+                                placeholder="Ex. 364001"
+                                [(ngModel)]="regInfo.pincode"
+                                required
+                            />
+                            <!-- (keyup)="onPincodeChange($event)" -->
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-4">
+                        <mat-form-field class="w-100 me-1" appearance="outline">
+                            <mat-label>Country</mat-label>
+                            <input
+                                matInput
+                                type="text"
+                                name="country"
+                                [(ngModel)]="regInfo.country"
+                                required
+                            />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-4">
+                        <mat-form-field class="w-100 me-1" appearance="outline">
+                            <mat-label>State</mat-label>
+                            <input
+                                matInput
+                                type="text"
+                                name="state"
+                                [(ngModel)]="regInfo.state"
+                                required
+                            />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-4">
+                        <mat-form-field class="w-100 me-1" appearance="outline">
+                            <mat-label>District</mat-label>
+                            <input
+                                matInput
+                                type="text"
+                                name="district"
+                                [(ngModel)]="regInfo.district"
+                                required
+                            />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-12">
+                        <mat-form-field class="w-100 me-1" appearance="outline">
+                            <mat-label>Address</mat-label>
+                            <textarea
+                                matInput
+                                rows="3"
+                                name="address"
+                                [(ngModel)]="regInfo.address"
+                                required
+                            ></textarea>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <button mat-flat-button class="rounded-5 w-25" color="primary" (click)="registerUser()">Register</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>

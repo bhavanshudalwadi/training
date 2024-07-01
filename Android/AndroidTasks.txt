@@ -1,0 +1,32 @@
+Launch Mode
+ - Standard (Default) => open activity evry time
+ - Single Top => If In Top Just onNewIntent() called (Activity is not created again if already on top)
+ - Single Task => If Activity is open in previus go to there and close other available in between
+ - Single Instance => Single Top + If Activity Already exist in backgrund the come to foreground.
+
+Intent Filter
+ - Implicit intent uses the intent filter to serve the user request.
+ - The intent filter specifies the types of intents that an activity, service, or broadcast receiver can respond.
+ - Intent filters are declared in the Android manifest file.
+ - Intent filter must contain <action>
+
+Ex. 
+<intent-filter> 
+    <action android:name="android.intent.action.MAIN" /> 
+    <category android:name="android.intent.category.LAUNCHER" /> 
+</intent-filter> 
+
+<!--SEND INTENT FILTER-->
+<intent-filter> 
+    <action android:name="android.intent.action.SEND"/> 
+    <category android:name="android.intent.category.DEFAULT"/> 
+    <data android:mimeType="text/plain"/> 
+</intent-filter> 
+
+<!--VIEW INTENT FILTER-->
+<intent-filter> 
+    <action android:name="android.intent.action.VIEW"/> 
+    <category android:name="android.intent.category.DEFAULT"/> 
+    <category android:name="android.intent.category.BROWSABLE"/> 
+    <data android:scheme="http"/> 
+</intent-filter> 

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">nine_app</string>
+    <string name="multi_color_text">
+        <![CDATA[
+        <font color="#FF0000">This is</font> <font color="#0000FF">a sample</font> <font color="#00FF00">text with multiple colors</font>
+        ]]>
+    </string>
+</resources>

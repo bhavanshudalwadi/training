@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_page1"
+        android:title="Page 1"
+        android:icon="@drawable/ic_1"/>
+    <item
+        android:id="@+id/navigation_page2"
+        android:title="Page 2"
+        android:icon="@drawable/ic_2"/>
+    <item
+        android:id="@+id/navigation_page3"
+        android:title="Page 3"
+        android:icon="@drawable/ic_3"/>
+    <item
+        android:id="@+id/navigation_page4"
+        android:title="Page 4"
+        android:icon="@drawable/ic_4"/>
+</menu>

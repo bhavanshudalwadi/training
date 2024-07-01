@@ -1,0 +1,3 @@
+cake bake controller students
+cake bake model registrations
+cake bake template registrations

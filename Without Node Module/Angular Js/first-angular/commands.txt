@@ -1,0 +1,31 @@
+Create Project => ng new project-name
+Start Server => npm start / ng serve
+Create Component => ng g c components/component-name
+Create Service => ng g s services/service-name
+
+<!-- If Condition -->
+@if(type == 1) {
+    <h2>Hello 5</h2>
+}@else {
+    <h2>Hello 7</h2>
+}
+
+<!-- Switch Case -->
+@switch (type) {
+    @case (1) {
+        <h2>Hello 1</h2>
+    }
+    @case (2) {
+        <h2>Hello 2</h2>
+    }
+    @default {
+        <h2>Hello</h2>
+    }
+}
+
+<!-- Loops -->
+@for (item of arr; track $index) {
+    <p>This is item {{item}}</p>
+}@empty {
+    <p>Array is empty</p>
+}

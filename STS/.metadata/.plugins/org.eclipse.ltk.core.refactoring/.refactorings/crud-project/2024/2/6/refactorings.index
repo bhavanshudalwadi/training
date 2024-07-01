@@ -1,0 +1,7 @@
+1707399780184	Rename resource 'WEB-INC'
+1707457491500	Rename resource 'indexz.jsp'
+1707457942852	Rename compilation unit 'StudentService.java'
+1707458790233	Rename type 'StudentController'
+1707460838846	Delete element
+1707461217900	Encapsulate field 'password'
+1707462100002	Encapsulate field 'roles'
